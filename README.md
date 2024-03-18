@@ -47,7 +47,7 @@ displays:
   samsung_ultrawide:
     default_padding: 8
     stop_manage_at: 4
-    uuid: CB41E958-4FE6-4E9E-A80C-19F2942AA7B4
+    uuid: <insert your own uuid. Find here --> yabai -m query --displays> 
     window_count_1:
       padding: 1700
     window_count_2:
