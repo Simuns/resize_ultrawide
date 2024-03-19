@@ -13,9 +13,13 @@
 
 ## Installation
 
-Just clone `resize_ultrawide` directly into your [yabai](https://github.com/koekeishiya/yabai) folder:
-
+#### Just clone `resize_ultrawide` directly into your [yabai](https://github.com/koekeishiya/yabai) folder:
 `git clone https://github.com/yourusername/resize_ultrawide.git ~/.config/yabai`
+#### Change dir into the application
+`cd ~/.config/yabai/resize_ultrawide`
+
+### Install dependencies
+`pip install ./requirements.txt`
 
 ### Add the listeners that you need to resize dynamically whenever new windows get added and removed
 
