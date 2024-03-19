@@ -42,9 +42,44 @@ shift + cmd - t : ~/.config/yabai/resize_ultrawide/resize_window.py --toggle_man
 
 #### now configure...
 * rename your display
+```yaml
+displays:
+  <your_display>:
+```
 * configure padding. set the default to your liking
+```yaml
+displays:
+  <your_display>:
+    default_padding: 8
+    window_count_<x>:
+      padding: <padding that makes sense for your screen size>
+```
 * flip can be used if you want new window to flip from horizontal direction to vertical on a specific window count.
+```yaml
+displays:
+  <your_display>:
+    window_count_<x>:
+      flip: true
+```
 * windows_blacklist are just list of items you don't want managed by the resizer 
+```yaml
+windows_blacklist:
+  app:
+  - System Settings
+  - <some other application>
+```
+* you can specify which spaces you want un/managed however this flag can also be managed via cmd: `./resize_window.py --toggle_manage_space`
+```yaml
+space:
+  s_1:
+    managed: true
+```
+* same goes for global management: `./resize_window.py --toggle_manage`
+```yaml
+managed: true
+```
+
+##### example...
 ```yaml
 debug: false
 displays:
@@ -63,8 +98,6 @@ log_file: resize_ultrawide.log
 managed: true
 space:
   s_1:
-    managed: true
-  s_10:
     managed: false
   s_2:
     managed: true
@@ -103,3 +136,8 @@ windows_blacklist:
 ## Dependencies
 * Python 3.x
 * PyYAML
+* argparse
+
+
+
+## Author: Símun Højgaard Lutzen | simunhojgaard@gmail.com
