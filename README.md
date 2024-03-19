@@ -13,7 +13,7 @@
 - **Notification Support**: Receive notifications for the toggle options.
 
 ## Usage
-#### Commandline options that shoudl be configured as on yabai as signals
+#### Commandline options that should be configured as on [yabai](https://github.com/koekeishiya/yabai) as signals
 * Trigger resize
 `./resize_window.py -r`  
 * Global management toggle
