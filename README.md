@@ -94,7 +94,8 @@ space:
 managed: true
 ```
 
-##### example... works well with following frame: `"frame":{"w":3440.0000,"h":1440.0000}`
+##### example... works well with following frame: 
+###### `"frame":{"w":3440.0000,"h":1440.0000}`
 ```yaml
 debug: false
 displays:
