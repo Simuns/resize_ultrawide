@@ -246,6 +246,7 @@ class Resize:
 
 def main():
     config_loader = ConfigLoader()  # Load the config once
+    resize_instance = Resize(config_loader)
 
     parser = argparse.ArgumentParser(description="Manage my application.")
     parser.add_argument('-r', '--resize', action='store_true', help='Resize specified windows or spaces')
@@ -262,9 +263,9 @@ def main():
             app_manager_instance.create_notification("Yabai Resizer Management", f"Global Management {onoff}.")
         if args.toggle_manage_space:
             app_manager_instance.toggle_screen_management()
+        resize_instance.run()
 
     if args.resize:
-        resize_instance = Resize(config_loader)
         resize_instance.run()
     
 
