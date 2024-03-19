@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 import os
-import subprocess
+import sys
 import json
 import datetime
+import subprocess
+
 import yaml
-import sys
 import argparse
 
 
@@ -120,7 +121,19 @@ class Resize:
         return final_count
 
 
-                
+    def list_windows_on_space(self):
+        current_space = str(self.get_current_space())
+        result = subprocess.run(["yabai", "-m", "query", "--windows", "--space", current_space], capture_output=True, text=True)
+        windows = json.loads(result.stdout)
+        for window in windows:
+            print(f"---Window---")
+            print(f"Window ID: {window['id']}")
+            print(f"App: {window['app']}")
+            print(f"Title: {window['title']}")
+            print(f"Role: {window['role']}")
+            print(f"Subrole: {window['subrole']}")
+            print(f"---End of window---")
+
     def get_newest_window(self):
         try:
             # Querying all windows for the current space or all spaces if needed
@@ -252,9 +265,12 @@ def main():
     parser.add_argument('-r', '--resize', action='store_true', help='Resize specified windows or spaces')
     parser.add_argument('--toggle_manage', action='store_true', help='Toggle an on/off global management.')
     parser.add_argument('--toggle_manage_space', action='store_true', help='Toggle an on/off current space management.')
+    parser.add_argument('--list_windows', action='store_true', help='Display information about windows on the current space. Useful for blacklisting.')
+
     # Add more arguments as needed
 
     args = parser.parse_args()
+    
 
     if args.toggle_manage or args.toggle_manage_space:
         app_manager_instance = App_Manager(config_loader)
@@ -267,6 +283,9 @@ def main():
 
     if args.resize:
         resize_instance.run()
+
+    if args.list_windows:
+        resize_instance.list_windows_on_space()
     
 
 
