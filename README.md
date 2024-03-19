@@ -47,10 +47,14 @@ displays:
   <your_display>:
 ```
 * configure padding. set the default to your liking
+* Insert your UUID. Can be found here: `yabai -m query --displays`
+* your hard stop manage window count
 ```yaml
 displays:
   <your_display>:
     default_padding: <your predefined padding>
+    stop_manage_at: 4
+    uuid: <your monitors UUID>
     window_count_<x>:
       padding: <padding that makes sense for your screen size>
 ```
