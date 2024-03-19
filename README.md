@@ -1,6 +1,6 @@
 # Yabai for Ultrawide monitors
 
-### Are you also tired of gigantic windows!
+### Are you also tired of gigantic windows?
 `resize_ultrawide` is a tool designed to work hand in hand with [yabai](https://github.com/koekeishiya/yabai) tiling manager. It allows for dynamic resizing and management of window layouts, making it easier to organize your workspace efficiently.
 
 ![animation](.content/animation.gif)
