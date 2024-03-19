@@ -19,7 +19,9 @@
 * Global management toggle
 `./resize_window.py --toggle_manage`
 * Specifies the space to toggle manage
-`./resize_window.py --toggle_manage_space` 
+`./resize_window.py --toggle_manage_space`
+* list windows on current screen. Very useful for adding windows to blacklist 
+* `./resize_window.py --list_windows` 
 
 ## Installation
 
