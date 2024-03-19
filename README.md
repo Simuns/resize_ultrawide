@@ -83,11 +83,11 @@ space:
 managed: true
 ```
 
-##### example... works well with following frame: ´yabai -m query --displays´
+##### example... works well with following frame: `yabai -m query --displays`´`
 ```json
-	"frame":{
-		"w":3440.0000,
-		"h":1440.0000
+"frame":{
+	"w":3440.0000,
+	"h":1440.0000
 ```
 ```yaml
 debug: false
