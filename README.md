@@ -12,6 +12,15 @@
 - **Customizable Shortcuts**: Integrate with macOS shortcuts to trigger resizing and layout changes effortlessly.
 - **Notification Support**: Receive notifications for the toggle options.
 
+## Usage
+#### Commandline options that shoudl be configured as on yabai as signals
+* Trigger resize
+`./resize_window.py -r`  
+* Global management toggle
+`./resize_window.py --toggle_manage`
+* Specifies the space to toggle manage
+`./resize_window.py --toggle_manage_space` 
+
 ## Installation
 
 #### Just clone `resize_ultrawide` directly into your [yabai](https://github.com/koekeishiya/yabai) folder:
@@ -127,18 +136,6 @@ windows_blacklist:
   - AXDialog
 
 ```
-
-
-
-## usage
-#### however [yabai](https://github.com/koekeishiya/yabai) should be listening for the application
-* Trigger resize
-`./resize_window.py -r`  
-* Global management toggle
-`./resize_window.py --toggle_manage`
-* Specifies the space to toggle manage
-`./resize_window.py --toggle_manage_space` 
-
 
 ## Dependencies
 * Python 3.x
