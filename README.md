@@ -131,10 +131,12 @@ windows_blacklist:
 
 ## usage
 #### however [yabai](https://github.com/koekeishiya/yabai) should be listening for the application
-
-`./resize_window.py -r`  # Trigger resize
-`./resize_window.py --toggle_manage` # Global management toggle
-`./resize_window.py --toggle_manage_space` # specifies the space to toggle manage
+* Trigger resize
+`./resize_window.py -r`  
+* Global management toggle
+`./resize_window.py --toggle_manage`
+* Specifies the space to toggle manage
+`./resize_window.py --toggle_manage_space` 
 
 
 ## Dependencies
