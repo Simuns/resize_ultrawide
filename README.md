@@ -50,7 +50,7 @@ displays:
 ```yaml
 displays:
   <your_display>:
-    default_padding: 8
+    default_padding: <your predefined padding>
     window_count_<x>:
       padding: <padding that makes sense for your screen size>
 ```
