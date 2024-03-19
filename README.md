@@ -51,7 +51,7 @@ shift + cmd - t : ~/.config/yabai/resize_ultrawide/resize_window.py --toggle_man
 `cp ./template_config.yml config.yml`
 * now edit the config.yml 
 
-#### now configure...
+#### Configure...
 * rename your display
 ```yaml
 displays:
