@@ -277,6 +277,10 @@ def main():
         if args.toggle_manage:
             onoff = app_manager_instance.toggle_setting(["managed"])
             app_manager_instance.create_notification("Yabai Resizer Management", f"Global Management {onoff}.")
+            if onoff == "Off":
+                #log.info("Global management turned off. refreshing yabai configuration.")
+                subprocess.run(["yabai", "--restart-service"])
+                app_manager_instance.create_notification("Yabai Resizer Management", f"Space {resize_instance.get_current_space()} Management {onoff}.")
         if args.toggle_manage_space:
             app_manager_instance.toggle_screen_management()
         resize_instance.run()
